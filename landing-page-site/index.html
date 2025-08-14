@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <link rel="stylesheet" href="src/styles/header.css">
+    <link rel="stylesheet" href="src/styles/home.css">
+    <link rel="stylesheet" href="src/styles/menu.css">
+    <link rel="stylesheet" href="src/styles/modal.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Alma Brasileira</title>
+</head>
+<body>
+
+    <header>
+        <nav id="navbar">
+            <i class="fa-solid fa-store" id="nav_logo">ALMA BRASILEIRA</i>
+            <ul id="nav_list">
+                <li class="nav-item active">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#catalogo">Catálogo</a>
+                </li>
+                <li class="nav-item">
+                    <a href="http://wa.me/61982040839">Contato</a>
+                </li>
+            </ul>
+
+            <button class="btn-default">
+                <a href="src/utils/alma-brasileira.pdf" target="_blank" download>Conheça mais</a>
+            </button>
+
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu">Catálogo</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contato">Contato</a>
+                </li>
+            </ul>
+
+            <button class="btn-default">
+                <a href="src/utils/alma-brasileira.pdf" download>Conheça mais</a>
+            </button>
+            
+        </div>
+    </header>
+
+    <main id="content">
+        <section id="home">
+            <div class="shape"></div>
+            <div id="cta">
+                <h1 class="title">Pulseiras que contam 
+                    <span>histórias</span>
+                </h1>
+
+                <p class="description">
+                    Conheça nossas pulseiras artesanais, feitas com amor e dedicação para você.
+                </p>
+
+                <div id="cta_buttons">
+                    <a href="#" class="btn-default">
+                        Ver catálogo
+                    </a>
+
+                    <a href="http://wa.me/61982040839" id="phone_button">
+                        <button class="btn-default">
+                            <i class="fa-solid fa-phone"></i>
+                        </button>
+                        (61) 98204-0839
+                    </a>
+                </div>
+
+                <div class="social-media-buttons">
+                    <a href="http://wa.me/61982040839">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="http://wa.me/61982040839">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+
+            </div>
+            <div id="banner">
+                <img src="src/img/banner.png" alt="Floral">
+            </div>
+        </section>
+
+        <section id="catalogo">
+            <h2 class="section-title">Catálogo</h2>
+            <h3 class="section-subtitle">Conheça nossas pulseiras</h3>
+
+            <div id="dishes">
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p1.jpg" class="dish-image" alt="Madrepérola" onclick="openModal(this)">
+
+                    <h3 class="dish-title">Madrepérola</h3>
+
+                    <span class="dish-description">Pulseira feita com Madrepérola e pérolas.</span>
+
+                    <div class="dish-price">
+                        <span>R$ 18,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Madrepérola">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                    <div id="imageModal" class="modal" onclick="closeModal()">
+                        <span class="close">&times;</span>
+                        <img class="modal-content" id="modalImg">
+                    </div>
+
+                    <i class="fa-solid fa-search-plus zoom-icon"></i>
+
+                </div>
+           
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p2.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Cristal de Vidro</h3>
+
+                    <span class="dish-description">Pulseira feita com cristais de vidro.</span>
+
+                    <div class="dish-price">
+                        <span>R$ 18,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Cristal de Vidro">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+            
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p3.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Mandamentos</h3>
+
+                    <span class="dish-description">Pulseira feita com cristais de vidro e pingente com descrição do 2° mandamento.</span>
+
+                    <div class="dish-price">
+                        <span>R$ 25,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Mandamentos">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+            
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p4.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Nome</h3>
+
+                    <span class="dish-description">Alguma descrição aqui</span>
+
+                    <div class="dish-price">
+                        <span>R$ 50,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Nome">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+      
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p5.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Olho Grego</h3>
+
+                    <span class="dish-description">Pulseira feita com fio de cristal de vidro.</span>
+
+                    <div class="dish-price">
+                        <span>R$ 18,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Olho Grego">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+           
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p6.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Blue</h3>
+
+                    <span class="dish-description">Pulseira feita com fio de cristal de vidro.</span>
+
+                    <div class="dish-price">
+                        <span>R$ 18,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Blue">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+           
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p7.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Ágata</h3>
+
+                    <span class="dish-description">Pulseira de Ágata Cornalina.</span>
+
+                    <div class="dish-price">
+                        <span>R$ 20,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Ágata">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+            
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p8.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Vermelho Rubi</h3>
+
+                    <span class="dish-description">Pulseira feita com fio de murano extra vermelho rubi.</span>
+
+                    <div class="dish-price">
+                        <span>R$ 18,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Vermelho Rubi">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+            
+          
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p10.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Púrpura, Ônix e Cristal Vermelho</h3>
+
+                    <span class="dish-description">1° pulseira é feita de madrepérolas, 2° é feita com pedras de ônix e 3° é feita com cristal de vidro e murano.</span>
+
+                    <div class="dish-price">
+                        <span>R$ 18,00 (UNIDADE)</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Púrpura, Ônix e Cristal Vermelho">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+         
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p11.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Sonho de Cristal</h3>
+
+                    <span class="dish-description">Pulseira feita com cristais de vidro, pingente de Madrepérola.</span>
+
+                    <div class="dish-price">
+                        <span>R$ 25,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Sonho de Cristal">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+            
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p12.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Crepúsculo</h3>
+
+                    <span class="dish-description">Pulseira feita com pedras de ônix.</span>
+
+                    <div class="dish-price">
+                        <span>R$ 28,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Crepúsculo">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+         
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p13.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Paixão do Mar</h3>
+
+                    <span class="dish-description">Pulseira feita com madrepérolas, fio de murano azul e pedras de jasper</span>
+
+                    <div class="dish-price">
+                        <span>R$ 30,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Paixão do Mar">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+            
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p14.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Íris</h3>
+
+                    <span class="dish-description">Pulseira feita com cristais de vidro verde e madrepérolas.</span>
+
+                    <div class="dish-price">
+                        <span>R$ 25,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Íris">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+           
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p15.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Seringal</h3>
+
+                    <span class="dish-description">Pulseira feita com cristais de vidro verde no tom escuro.</span>
+
+                    <div class="dish-price">
+                        <span>R$ 22,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Seringal">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+           
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p16.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Rubina</h3>
+
+                    <span class="dish-description">Pulseira feita com fio de murano.</span>
+
+                    <div class="dish-price">
+                        <span>R$ 25,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Rubina">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+          
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p17.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Caeté</h3>
+
+                    <span class="dish-description">Pulseira feita com cristais de vidro</span>
+
+                    <div class="dish-price">
+                        <span>R$ 22,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Caeté">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+            
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p18.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Brisa</h3>
+
+                    <span class="dish-description">Pulseira feita com pedras de jasper.</span>
+
+                    <div class="dish-price">
+                        <span>R$ 28,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Brisa">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+          
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p19.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Jatobá</h3>
+
+                    <span class="dish-description">Pulseira feita com pedras de ônix.</span>
+
+                    <div class="dish-price">
+                        <span>R$ 28,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Jatobá">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+            
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p20.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Aurora</h3>
+
+                    <span class="dish-description">Pulseira feita com cristais de vidro.</span>
+
+                    <div class="dish-price">
+                        <span>R$ 25,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Aurora">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+            
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p21.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Luz da meia-noite</h3>
+
+                    <span class="dish-description">Pulseira feita com pedra hematita.</span>
+
+                    <div class="dish-price">
+                        <span>R$ 25,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Luz da meia-noite">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+           
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p22.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Lina</h3>
+
+                    <span class="dish-description">Alguma descrição aqui</span>
+
+                    <div class="dish-price">
+                        <span>R$ 50,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Nome">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+         
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p23.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Jaci</h3>
+
+                    <span class="dish-description">Alguma descrição aqui</span>
+
+                    <div class="dish-price">
+                        <span>R$ 50,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Nome">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+            
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p24.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Estelar</h3>
+
+                    <span class="dish-description">Alguma descrição aqui</span>
+
+                    <div class="dish-price">
+                        <span>R$ 50,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Nome">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+        
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p25.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Dália</h3>
+
+                    <span class="dish-description">Pulseira feita em macramê com arte central feita com cristais de vidro.</span>
+
+                    <div class="dish-price">
+                        <span>R$ 18,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Dália">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+         
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p26.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Pulseiras macramê</h3>
+
+                    <span class="dish-description">Pulseiras com cores e pingentes diversos, feitas em macramê.</span>
+
+                    <div class="dish-price">
+                        <span>R$ 50,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Pulseiras macramê">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+            
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p28.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Maré, Carmim e Zélia</h3>
+
+                    <span class="dish-description">Alguma descrição aqui</span>
+
+                    <div class="dish-price">
+                        <span>R$ 50,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Maré, Carmim e Zélia">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+            
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p29.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Coralina</h3>
+
+                    <span class="dish-description">Alguma descrição aqui</span>
+
+                    <div class="dish-price">
+                        <span>R$ 50,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Coralina">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+         
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p30.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Serena</h3>
+
+                    <span class="dish-description">Alguma descrição aqui</span>
+
+                    <div class="dish-price">
+                        <span>R$ 50,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Serena">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+            
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p31.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Moema</h3>
+
+                    <span class="dish-description">Alguma descrição aqui</span>
+
+                    <div class="dish-price">
+                        <span>R$ 50,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Moema">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+            
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p33.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Aimée</h3>
+
+                    <span class="dish-description">Alguma descrição aqui</span>
+
+                    <div class="dish-price">
+                        <span>R$ 50,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Aimée">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+            
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p34.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Âmbar</h3>
+
+                    <span class="dish-description">Alguma descrição aqui</span>
+
+                    <div class="dish-price">
+                        <span>R$ 50,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Âmbar">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+    
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p35.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Lavanda</h3>
+
+                    <span class="dish-description">Alguma descrição aqui</span>
+
+                    <div class="dish-price">
+                        <span>R$ 50,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Lavanda">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/img/p36.jpg" class="dish-image" alt="">
+
+                    <h3 class="dish-title">Jasmim</h3>
+
+                    <span class="dish-description">Alguma descrição aqui</span>
+
+                    <div class="dish-price">
+                        <span>R$ 50,00</span>
+                        <button class="btn-default whatsapp-redirect" data-item-name="Jasmim">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </section>
+
+    </main>
+
+    <script src="src/js/script.js"></script>
+    
+</body>
+</html>
