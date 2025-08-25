@@ -28,6 +28,7 @@
     position: relative;
     overflow: hidden;
     cursor: zoom-in;
+    overflow: hidden;
 }
 
 .dish-heart {
@@ -62,6 +63,22 @@
     background-color: #fff; 
     border-radius: 60px;
 }
+
+.dish.sold::after {
+    content: "VENDIDO";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+
 
 .zoom-icon {
     opacity: 0;
